@@ -1,0 +1,17 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <h1>Welcome to SGAnnotate</h1>
+  <p>Annotate the rules in your AWS security groups for easy maintenance.</p>
+  {% if current_user and current_user.is_authenticated() %}
+    <p><a class="btn btn-lg btn-primary" href="security">View security groups<span class="glyphicon glyphicon-chevron-right"></span></a></p>
+  {% else %}
+    <p><a class="btn btn-lg btn-primary" href="login/google">Please log me in!<span class="glyphicon glyphicon-chevron-right"></span></a></p>
+  {% endif %}
+
+</div><!-- /.jumbotron -->
+{% endblock %}
+
